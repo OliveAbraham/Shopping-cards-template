@@ -1,0 +1,65 @@
+
+
+.title {
+  
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: #095802;
+    color:#ffffff;
+    font: normal normal 100%/1.5;
+    font-family: 'poppins', sans-serif;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container:hover .glass {
+    transform: rotate(0deg);
+    margin: 0 20px;
+}
+
+.glass {
+    width: 200px;
+    height: 240px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(#fff2, transparent);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 0 -20px;
+    transform: rotate(-10deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    backdrop-filter: blur(10px);
+}
+
+.glass::before {
+    position: absolute;
+    content: attr(data-text);
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    font-weight: 600;
+}
+
+.glass i {
+    font-size: 4rem;
+}
